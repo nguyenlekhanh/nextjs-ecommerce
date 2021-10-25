@@ -1,0 +1,63 @@
+.item {
+  margin: 1rem 0;
+}
+
+.image {
+  width: 188px;
+  height: 188px;
+  overflow: hidden;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  text-align: center;
+  padding: 1rem;
+}
+
+.content h3 {
+  font-size: 1.25rem;
+  color: #2c292b;
+}
+
+.content .description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 160px;
+  height: 2.2em;
+  white-space: nowrap;
+}
+
+.content .price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.actions {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.actions button {
+  font: inherit;
+  margin-bottom: 5px;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #ffe2ed;
+}
+
+.quantity_input {
+  width: 111px;
+}
+
+.delete_icon {
+  color: red;
+  cursor: pointer;
+}

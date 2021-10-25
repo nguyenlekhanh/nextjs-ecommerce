@@ -1,0 +1,22 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.total_price {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* .checkout_btn {
+  margin-top: 10px;
+  background-color: #eec10d;
+  color: black;
+  border: 1px solid #eec10d;
+}
+.checkout_btn:hover {
+  background-color: #eec10d;
+  color: black;
+  border: 1px solid #eec10d;
+} */
