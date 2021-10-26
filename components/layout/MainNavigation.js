@@ -62,7 +62,7 @@ function MainNavigation() {
                   aria-controls="simple-menu"
                   aria-haspopup="true"
                   onClick={loginClickHandler}
-                  className={classes1.navbarButton1}
+                  className={classes.navbarButton1}
                 >
                   {userInfo.name}
                 </Button>

@@ -31,7 +31,7 @@ export async function getStaticPaths() {
   const products = await productsCollection.find({}, { _id: 1 }).toArray();
 
   return {
-    fallback: true,
+    fallback: false,
     paths: products.map((product) => ({
       params: { productId: product._id.toString() },
     })),

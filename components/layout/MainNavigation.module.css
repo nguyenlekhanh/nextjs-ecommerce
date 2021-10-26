@@ -51,3 +51,12 @@
   font-weight: bold;
   right: -11px;
 }
+
+.navbarButton1 {
+  color: #fcb8d2 !important;
+  text-transform: initial !important;
+}
+
+.navbarButton1:hover {
+  color: white !important;
+}
