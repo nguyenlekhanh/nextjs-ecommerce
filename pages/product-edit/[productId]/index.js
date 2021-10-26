@@ -42,9 +42,7 @@ export default function ProductEdit(props) {
 }
 
 export async function getStaticPaths() {
-  const client = await MongoClient.connect(
-    "mongodb+srv://academic:123654789@cluster0.5la9p.mongodb.net/meetups?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient.connect(process.env.MONGODB_URI);
   const db = client.db();
 
   const productsCollection = db.collection("products");
@@ -62,9 +60,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const productId = context.params.productId;
 
-  const client = await MongoClient.connect(
-    "mongodb+srv://academic:123654789@cluster0.5la9p.mongodb.net/meetups?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient.connect(process.env.MONGODB_URI);
   const db = client.db();
 
   const productsCollection = db.collection("products");

@@ -8,9 +8,7 @@ async function handler(req, res) {
 
     //const { title, image, address, description } = data;
 
-    const client = await MongoClient.connect(
-      "mongodb+srv://academic:123654789@cluster0.5la9p.mongodb.net/meetups?retryWrites=true&w=majority"
-    );
+    const client = await MongoClient.connect(process.env.MONGODB_URI);
     const db = client.db();
 
     const meetupsCollection = db.collection("meetups");

@@ -48,9 +48,7 @@ export async function getServerSideProps(context) {
     sessionid = session.id;
   }
 
-  const client = await MongoClient.connect(
-    "mongodb+srv://academic:123654789@cluster0.5la9p.mongodb.net/meetups?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient.connect(process.env.MONGODB_URI);
   const db = client.db();
 
   const productsCollection = db.collection("products");
@@ -75,7 +73,7 @@ export async function getServerSideProps(context) {
 // export async function getStaticProps() {
 //   // fetch data from an api or database
 //   const client = await MongoClient.connect(
-//     "mongodb+srv://academic:123654789@cluster0.5la9p.mongodb.net/meetups?retryWrites=true&w=majority"
+//     process.env.MONGODB_URI
 //   );
 //   const db = client.db();
 

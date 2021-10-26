@@ -285,9 +285,7 @@ export async function getServerSideProps(context) {
 
   let products = [];
 
-  const client = await MongoClient.connect(
-    "mongodb+srv://academic:123654789@cluster0.5la9p.mongodb.net/meetups?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient.connect(process.env.MONGODB_URI);
   const db = client.db();
 
   const cartsCollection = db.collection("carts");
